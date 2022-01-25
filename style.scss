@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import 'var';
+@import 'mixins';
+
+
+    .container {
+    // @include myFlexCenter (100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+
+         img {
+            object-position: center;
+            object-fit: cover;
+            height: 30vh;
+            width: 30vw;
+            padding: $myPadding;
+            border: 3px solid #1d3f75;
+            background-color: $myBg;
+           @include myFilter(50%);
+      
+                 &:hover {
+                @include myFilter (110%);
+                border: 3px solid #1550b0;
+                border-radius: 30px;
+             }
+        }
+    }       
+
